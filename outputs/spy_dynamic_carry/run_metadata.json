@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "mode": "demo rapide",
+    "ticker": "SPY",
+    "start_date": "2020-01-02",
+    "end_date": "2020-05-29",
+    "window": 30,
+    "refit_every": 15,
+    "optimizer_maxiter": 12,
+    "base_allocation": 1.0,
+    "sensitivity": 0.4,
+    "implied_vol_maturity_days": 30
+  },
+  "files": {
+    "figures": [
+      "heston_parameters.png",
+      "nav_comparison.png",
+      "signal_dashboard.png"
+    ],
+    "tables": [
+      "backtest_comparison.csv",
+      "nav_comparison.csv",
+      "parameter_frame.csv",
+      "signal_frame.csv"
+    ]
+  },
+  "row_counts": {
+    "signal_frame": 103,
+    "parameter_frame": 73,
+    "base_trades": 708,
+    "timed_trades": 708
+  }
+}

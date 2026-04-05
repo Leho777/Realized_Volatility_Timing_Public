@@ -1,0 +1,26 @@
+Timed carry backtest summary
+
+mode: demo rapide
+ticker: SPY
+start_date: 2020-01-02
+end_date: 2020-05-29
+window: 30
+refit_every: 15
+optimizer_maxiter: 12
+base_allocation: 1.0
+sensitivity: 0.4
+implied_vol_maturity_days: 30
+
+             total_return  sharpe_ratio  calmar_ratio  max_drawdown
+strategy                                                           
+Base carry      -0.007768     -0.245698     -0.551441     -0.029652
+Timed carry     -0.000100      0.034359      0.065576     -0.039728
+
+Generated files:
+  figure: heston_parameters.png
+  figure: nav_comparison.png
+  figure: signal_dashboard.png
+  table: backtest_comparison.csv
+  table: nav_comparison.csv
+  table: parameter_frame.csv
+  table: signal_frame.csv

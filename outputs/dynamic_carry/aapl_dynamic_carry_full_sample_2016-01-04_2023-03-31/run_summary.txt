@@ -1,0 +1,36 @@
+Dynamic carry experiment summary
+
+ticker: AAPL
+mode: full sample
+start_date: 2016-01-04
+end_date: 2023-03-31
+window: 42
+refit_every: 10
+optimizer_maxiter: 12
+base_allocation: 1.0
+sensitivity: 0.4
+implied_vol_maturity_days: 30
+
+Backtest comparison:
+                    total_return  sharpe_ratio  calmar_ratio  max_drawdown
+strategy                                                                  
+Base carry              0.186557      0.624300      0.512204     -0.045915
+Timed carry UKF         0.260136      0.692881      0.579220     -0.055044
+Timed carry RV_21d      0.289876      0.976562      0.743387     -0.046502
+
+Proxy metrics:
+               corr_vs_rv_21d  corr_vs_rv_63d  mae_vs_rv_21d  mae_vs_rv_63d
+proxy                                                                      
+UKF sigma_hat        0.379767        0.623101       0.171318       0.158333
+IV ATM               0.457480        0.462195       0.116031       0.137137
+
+Generated files:
+  figure: heston_parameters.png
+  figure: nav_comparison.png
+  figure: signal_dashboard.png
+  table: backtest_comparison.csv
+  table: nav_comparison.csv
+  table: parameter_frame.csv
+  table: proxy_metrics.csv
+  table: signal_frame_rv_21d.csv
+  table: signal_frame_ukf.csv

@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "ticker": "AAPL",
+    "mode": "full sample",
+    "start_date": "2016-01-04",
+    "end_date": "2023-03-31",
+    "window": 42,
+    "refit_every": 10,
+    "optimizer_maxiter": 12,
+    "base_allocation": 1.0,
+    "sensitivity": 0.4,
+    "implied_vol_maturity_days": 30
+  },
+  "files": {
+    "figures": [
+      "heston_parameters.png",
+      "nav_comparison.png",
+      "signal_dashboard.png"
+    ],
+    "tables": [
+      "backtest_comparison.csv",
+      "nav_comparison.csv",
+      "parameter_frame.csv",
+      "proxy_metrics.csv",
+      "signal_frame_rv_21d.csv",
+      "signal_frame_ukf.csv"
+    ]
+  },
+  "row_counts": {
+    "signal_frame_ukf": 1781,
+    "signal_frame_rv_21d": 1802,
+    "parameter_frame": 1781,
+    "base_trades": 11650,
+    "ukf_timed_trades": 11650,
+    "rv_timed_trades": 11650
+  },
+  "proxy_metrics_rows": 2
+}

@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "ticker": "SPY",
+    "mode": "full sample",
+    "start_date": "2020-01-02",
+    "end_date": "2022-12-30",
+    "window": 42,
+    "refit_every": 10,
+    "optimizer_maxiter": 12,
+    "base_allocation": 1.0,
+    "sensitivity": 0.4,
+    "implied_vol_maturity_days": 30
+  },
+  "files": {
+    "figures": [
+      "heston_parameters.png",
+      "nav_comparison.png",
+      "signal_dashboard.png"
+    ],
+    "tables": [
+      "backtest_comparison.csv",
+      "nav_comparison.csv",
+      "parameter_frame.csv",
+      "proxy_metrics.csv",
+      "signal_frame_rv_21d.csv",
+      "signal_frame_ukf.csv"
+    ]
+  },
+  "row_counts": {
+    "signal_frame_ukf": 716,
+    "signal_frame_rv_21d": 737,
+    "parameter_frame": 716,
+    "base_trades": 5390,
+    "ukf_timed_trades": 5390,
+    "rv_timed_trades": 5390
+  },
+  "proxy_metrics_rows": 2
+}

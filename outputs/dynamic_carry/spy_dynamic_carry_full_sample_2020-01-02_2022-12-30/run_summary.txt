@@ -1,0 +1,36 @@
+Dynamic carry experiment summary
+
+ticker: SPY
+mode: full sample
+start_date: 2020-01-02
+end_date: 2022-12-30
+window: 42
+refit_every: 10
+optimizer_maxiter: 12
+base_allocation: 1.0
+sensitivity: 0.4
+implied_vol_maturity_days: 30
+
+Backtest comparison:
+                    total_return  sharpe_ratio  calmar_ratio  max_drawdown
+strategy                                                                  
+Base carry              0.038134      0.485716      0.418207     -0.029652
+Timed carry UKF         0.045110      0.496607      0.494774     -0.029652
+Timed carry RV_21d      0.051989      0.855387      0.932798     -0.017732
+
+Proxy metrics:
+               corr_vs_rv_21d  corr_vs_rv_63d  mae_vs_rv_21d  mae_vs_rv_63d
+proxy                                                                      
+UKF sigma_hat        0.307724        0.534414       0.161144       0.154802
+IV ATM               0.851540        0.663562       0.048803       0.054122
+
+Generated files:
+  figure: heston_parameters.png
+  figure: nav_comparison.png
+  figure: signal_dashboard.png
+  table: backtest_comparison.csv
+  table: nav_comparison.csv
+  table: parameter_frame.csv
+  table: proxy_metrics.csv
+  table: signal_frame_rv_21d.csv
+  table: signal_frame_ukf.csv

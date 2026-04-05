@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "realized-volatility-timing"
+version = "0.1.0"
+description = "Realized volatility timing with a Heston UKF and dynamic carry allocation."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "pandas",
+    "pyarrow",
+    "scipy",
+    "matplotlib",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+notebook = ["jupyterlab"]
+
+[tool.setuptools.packages.find]
+include = ["investment_lab*", "realized_vol_timing*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
